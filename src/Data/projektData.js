@@ -13,17 +13,24 @@ import WhatToDoTodayVideo from "../Video/Demo-WhatToDoToday.mp4";
 import DearFriendsVideo from "../Video/Demo-DearFriends.mp4";
 import GithubStatsVideo from "../Video/Demo-GithubStats.mp4";
 import DetectiveGameVideo from "../Video/Demo-DetectiveGame.mp4";
+import VetCareVideo from "../Video/Demo-VetCare.mp4";
 
 const projects = [
     {
       title: "Fullstack application - VeterinaryJournalSystem",
-      status: "Under utveckling",
+      // status: "Under utveckling",
       description:
         "Rollbaserat journalsystem för personal på en veterinärklinik. Byggt i Blazor och C#.",
       longText: "I applikationen kan du:",
       list: [
+        "Logga in som anställd",
+        "Skapa ägarprofiler och djurprofiler",
+        "Ändra information om ägare och djur",
+        "Boka besök för djur och se tidigare besökshistorik",
+        "Skapa journalanteckningar för djur",
       ],
       image: VeterinaryJournalSystemImage,
+      video: VetCareVideo,
       tags: ["SQL", "Blazor", "C#", "Entity Framework", "Tests", "Clean Architecture", "Github Actions"],
       links: [
         { label: "Github repo", href: "https://github.com/natta1995/VeterinaryJournalSystem" },
