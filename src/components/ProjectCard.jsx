@@ -70,7 +70,7 @@ const ProjectCard = ({
       {/* Modal */}
       {open && (
         <div
-          className="fixed inset-0 z-50 overflow-y-auto bg-black/40 p-3 sm:p-4"
+          className="fixed inset-0 z-50 overflow-y-auto bg-black/40 sm:p-4"
           onClick={() => setOpen(false)}
           role="dialog"
           aria-modal="true"
