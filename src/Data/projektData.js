@@ -20,7 +20,9 @@ const projects = [
       title: "Fullstack application - VeterinaryJournalSystem",
       // status: "Under utveckling",
       description:
-        "Rollbaserat journalsystem för personal på en veterinärklinik. Byggt i Blazor och C#.",
+        "Journalsystem för personal på en veterinärklinik. Byggt i Blazor och C#.",
+      type: "Skolprojekt",
+      size: "Mellan",
       longText: "I applikationen kan du:",
       list: [
         "Logga in som anställd",
@@ -41,6 +43,8 @@ const projects = [
       title: "Fullstack application - QuestGameDetective ",
       description:
         "Ett textbaserat spel där tar tar rollen som en detektiv som löser mysterier i ett London 1939.",
+      type: "Passionprojekt",
+      size: "Stort",
       longText:"I applikationen kan du:",
       list: [
       "Registrera och logga in som användare",
@@ -75,6 +79,8 @@ const projects = [
       title: "Blazor application - GithubStats ",
       description:
         "Sök och visa information om Githubanvändare med hjälp av Githubs REST API.",
+          type: "Skolprojekt",
+          size: "Litet",
       longText:"I applikationen kan du:",
       list: [
         "Hämtar data ifrån Githubs REST API",
@@ -97,6 +103,8 @@ const projects = [
       title: "Socialt Nätverk - DearFriends",
       description:
         "Fullstack applikation - Inspirerad av Facebook.",
+      type: "Passionprojekt",
+      size: "Stor",
       longText:"I applikationen kan du:",
       list: [
         "Skapa och ta bort konto",
@@ -121,6 +129,8 @@ const projects = [
       title: "Konsoll Application - TheDetectiveQuestTracker",
       description:
         "Ett textbaserat spel där tar tar rollen som en detektiv som löser mysterier i ett London 1936.",
+      type: "Passionprojekt",
+      size: "Stor",
       longText:"I applikationen kan du:",
       list: [
         
@@ -149,6 +159,8 @@ const projects = [
   title: "Frontend applikation - Aktivitetsgenerator",
   description:
     "En React-applikation som genererar aktivitetsförslag baserat på användarens val av plats och årstid.",
+      type: "Passionprojekt",
+      size: "Mellan",
   longText: "I applikationen kan du:",
   list: [
     "Välja om du är hemma eller borta",

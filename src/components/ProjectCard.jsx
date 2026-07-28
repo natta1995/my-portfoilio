@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { XIcon, ExternalLinkIcon, GithubIcon } from "lucide-react";
 import defaultVideo from "../Video/default.mp4";
+
 
 const ProjectCard = ({
   title,
@@ -12,11 +13,20 @@ const ProjectCard = ({
   links = [],
   video,
   status,
+  type,
+  size,
 }) => {
   const [open, setOpen] = useState(false);
 
   const isGithub = (url = "") => url.toLowerCase().includes("github.com");
   const videoToShow = video || defaultVideo;
+  const videoRef = useRef(null);
+
+  const handleFullscreen = () => {
+  if (videoRef.current?.requestFullscreen) {
+    videoRef.current.requestFullscreen();
+  }
+};
 
   return (
     <>
@@ -51,6 +61,8 @@ const ProjectCard = ({
         <div className="p-5">
           <h3 className="text-lg font-semibold text-zinc-900">{title}</h3>
           <p className="mt-2 text-sm text-zinc-600">{description}</p>
+          <p className="mt-2 text-sm text-zinc-600">Typ: {type}</p>
+          <p className="mt-2 text-sm text-zinc-600">Storlek: {size}</p>
 
           {tags.length > 0 && (
             <div className="mt-4 flex flex-wrap gap-2">
@@ -153,13 +165,18 @@ const ProjectCard = ({
 
               {/* Höger video */}
               <div className="lg:col-span-2">
+                <p className="mb-2 text-sm text-zinc-500">
+               Klicka på videon för att visa den i helskärm.
+              </p>
                 <div className="aspect-video w-full overflow-hidden rounded-lg border border-zinc-50 bg-black shadow-lg">
                   <video
                     className="h-full w-full object-contain"
+                    ref={videoRef}
                     autoPlay
                     muted
                     loop
                     playsInline
+                    onClick={handleFullscreen}
                   >
                     <source src={videoToShow} type="video/mp4" />
                     Din webbläsare stödjer inte video.
